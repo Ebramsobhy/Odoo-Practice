@@ -1,0 +1,92 @@
+<odoo>
+    <data>
+        <template id="iti_student_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.basic_layout">
+                        <div class="page">
+
+                            <div class="row bg-200">
+                                <div class="col-4 text-left">
+                                    <span class="align-left text-danger">
+                                        <strong>Student Status Report</strong>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <table class="table borderless" style="height:100px;">
+                                <tr class="text-center">
+                                    <td class=" mr-2 text-center">
+                                        Name:
+                                        <span t-field="o.name"/>
+                                    </td>
+                                    <td class=" mr-2 text-center">
+                                        Birth Date:
+                                        <span t-field="o.birthdate"/>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class="mr-2 text-center">
+                                        Age:
+                                        <span t-field="o.age"/>
+                                    </td>
+                                    <td class=" mr-2 text-center">
+                                        Gender:
+                                        <span t-field="o.gender"/>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class=" mr-2 text-center">
+                                        Track:
+                                        <span t-field="o.track_id"/>
+                                    </td>
+                                    <td class=" mr-2 text-center">
+                                        Student Level:
+                                        <span t-field="o.level"/>
+                                    </td>
+                                </tr>
+
+                            </table>
+                            <div>
+                                <center>
+                                    <strong>
+                                        Student Logs
+                                    </strong>
+                                </center>
+
+                            </div>
+
+                            <table class="table table-sm table-bordered">
+                                <thead style="display: table-row-group">
+                                    <tr class="table-primary border border-white">
+                                        <th class="text-center border border-white"> User</th>
+                                        <th class="text-center border border-white"> Date</th>
+                                        <th class="text-center border border-white"> Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="counter" t-value="0"/>
+                                    <t t-foreach="o.level_logs" t-as="A">
+                                        <t t-set="counter" t-value="counter + 1"/>
+                                        <tr class="border border-white">
+                                            <td class="text-center border border-white">
+                                                <span t-field="A.create_uid" />
+                                            </td>
+                                            <td class="text-center border border-white">
+                                                <span t-field="A.create_date"/>
+                                            </td>
+                                            <td class="text-center border border-white">
+                                                <span t-field="A.description" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

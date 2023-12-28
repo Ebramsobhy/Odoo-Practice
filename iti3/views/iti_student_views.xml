@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+        <record id = 'iti_student_action' model="ir.actions.act_window">
+            <field name="name">Students Data</field>
+            <field name="res_model">iti.student</field>
+        </record>
+
+        <record id = 'iti_student_tree_view' model ="ir.ui.view">
+             <field name="name">Student Tree View</field>
+             <field name="model">iti.student</field>
+             <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="age"/>
+                    <field name="accepted"/>
+                    <field name="gender"/>
+                </tree> 
+             </field>      
+        </record>
+
+         <record id = 'iti_student_form_view' model ="ir.ui.view">
+             <field name="name">Student Form View</field>
+             <field name="model">iti.student</field>
+             <field name="arch" type="xml">
+                <form>  
+                   <header>
+                       <button name="button_clicked" type="object" string="Trail_Button" groups="iti3.managers_group"/>
+                       <field name="level" widget="statusbar" nolabel="1" options="{'clickable':'1'}"/>
+                   </header>
+                    <sheet> 
+                        <notebook string='Student Data'>
+                            <page string='Information 1'>
+                                <group string='Personal Information'>              
+                                   <field name="name" required = '1'/>
+                                   <field name="birthdate"/>
+                                   <field name="age"/>
+                                   <field name="accepted"/>
+                                   <field name="gender"/>
+                                </group>
+                            </page>
+                            <page string='Information 2'>
+                                <group string='Working Information'>
+                                   <field name="salary" attrs = "{
+                                     'invisible' : [('is_working', '=', False)] }"/>
+                                   <field name="cv" attrs = "{
+                                     'required' : [('is_working', '=', True)] }"/>
+                                   <field name="is_working"/>
+                               </group>
+                            </page>
+                            <page string='Track Information'>
+                               <group>
+                                   <field name="track_id" domain="[('is_opened', '=', True)]"/>
+                                   <field name="track_capacity" string="Department Capacity"/>
+                               </group>
+                            </page>
+                            <page string="Level Logs">
+                                <field name="level_logs">
+                                   <tree>
+                                       <field name="create_date"/>
+                                       <field name="create_uid"/>
+                                       <field name="description"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form> 
+             </field>      
+        </record>
+
+        <menuitem name = 'ITI' id = 'iti_base_menu' />
+        <menuitem name = 'Students' id = 'student_menu' parent = 'iti_base_menu' 
+        action = 'iti_student_action' sequence = '2'/>
+    </data>
+</odoo>
+ 
