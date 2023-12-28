@@ -5,14 +5,17 @@
 - You can add Tracks.
 - Each student has log history to trace their level advancements.
 ---
-![Image 1](https://github.com/Ebramsobhy/Odoo-Practice/assets/116510911/65b6d95b-c0b1-465d-ab38-bbbe0ff93031)
+![Image 1](https://github.com/Ebramsobhy/Odoo-Practice/assets/116510911/d112383b-3218-4f54-8a83-f6ce07fedbc8)
 
 ---
-![Image 2](https://github.com/Ebramsobhy/Odoo-Practice/assets/116510911/5a2f9ad8-c0fd-423d-8d78-5f3b5cb61e2d)
+![Image 2](https://github.com/Ebramsobhy/Odoo-Practice/assets/116510911/83df302f-375a-432f-9789-fc204cce47cc)
 
 ---
 
-![Image 3](https://github.com/Ebramsobhy/Odoo-Practice/assets/116510911/7228ba4e-9783-4bb0-b958-677ac41eb1dc)
+![Image 3](https://github.com/Ebramsobhy/Odoo-Practice/assets/116510911/22096b96-9605-4d7c-a2a5-e12a6453b6cb)
 
 ---
-![Image 3](https://github.com/Ebramsobhy/Odoo-Practice/assets/116510911/2d63cad1-5215-407d-8dbb-7da2097b357e)
+![Image 4](https://github.com/Ebramsobhy/Odoo-Practice/assets/116510911/1f1dea4f-b61e-4ec6-9298-62a94cb22d29)
+
+---
+![Image 5](https://github.com/Ebramsobhy/Odoo-Practice/assets/116510911/5bbaa9ab-f31e-451d-bad0-2563639c9b4a)
