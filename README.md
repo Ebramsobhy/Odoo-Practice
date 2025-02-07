@@ -1,4 +1,4 @@
-# Student Management Module
+## Student Management Module
 ---
 ## Features
 - You can add students.
